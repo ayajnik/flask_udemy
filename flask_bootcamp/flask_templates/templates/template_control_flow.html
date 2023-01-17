@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Control flows</title>
+    </head>
+    <body>
+        <h1>In this lecture we will understand control flow in templates with flask</h1>
+        <h2>As usual we will take puppies as an example. This is because they are cute, duhh?!</h2>
+        <br>
+        <img src="../static/st.bernard.jpg" alt="">
+        <br>
+        <ul>
+        {% for pup in puppies %}
+            <p>We have the following puppies living with us</p>
+            <li>{{pup}}</li>
+            {% if 'Rufus' in pup %}
+                <p>Rufus, there you are!</p>
+            {% else %}
+                <p>Ohh Rufus, where are you?</p>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </body>
+</html>
